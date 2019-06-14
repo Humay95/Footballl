@@ -34,25 +34,25 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.txtroom = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.num = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.btnrmsadd = new System.Windows.Forms.Button();
             this.dtgview = new System.Windows.Forms.DataGridView();
-            this.num = new System.Windows.Forms.NumericUpDown();
             this.lblError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgview)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Purple;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(249, 8);
@@ -63,7 +63,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Purple;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
@@ -83,23 +83,13 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Purple;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.txtroom);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(170, 152);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(451, 81);
             this.panel2.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Purple;
-            this.panel3.Controls.Add(this.num);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(170, 248);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(451, 81);
-            this.panel3.TabIndex = 6;
             // 
             // txtroom
             // 
@@ -109,10 +99,28 @@
             this.txtroom.Size = new System.Drawing.Size(201, 29);
             this.txtroom.TabIndex = 3;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.num);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(170, 248);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(451, 81);
+            this.panel3.TabIndex = 6;
+            // 
+            // num
+            // 
+            this.num.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num.Location = new System.Drawing.Point(214, 27);
+            this.num.Name = "num";
+            this.num.Size = new System.Drawing.Size(206, 26);
+            this.num.TabIndex = 5;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Purple;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(45, 27);
@@ -123,10 +131,10 @@
             // 
             // btnrmsadd
             // 
-            this.btnrmsadd.BackColor = System.Drawing.Color.Purple;
+            this.btnrmsadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnrmsadd.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnrmsadd.ForeColor = System.Drawing.Color.White;
-            this.btnrmsadd.Location = new System.Drawing.Point(596, 367);
+            this.btnrmsadd.Location = new System.Drawing.Point(607, 404);
             this.btnrmsadd.Name = "btnrmsadd";
             this.btnrmsadd.Size = new System.Drawing.Size(172, 53);
             this.btnrmsadd.TabIndex = 7;
@@ -142,14 +150,6 @@
             this.dtgview.Name = "dtgview";
             this.dtgview.Size = new System.Drawing.Size(589, 150);
             this.dtgview.TabIndex = 8;
-            // 
-            // num
-            // 
-            this.num.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num.Location = new System.Drawing.Point(214, 27);
-            this.num.Name = "num";
-            this.num.Size = new System.Drawing.Size(206, 26);
-            this.num.TabIndex = 5;
             // 
             // lblError
             // 
@@ -185,8 +185,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

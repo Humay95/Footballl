@@ -19,7 +19,21 @@ namespace Futbol
         {
             InitializeComponent();
         }
+        public void FillDataGridView()
+        {
+            dtgview.DataSource = db.Reservations.
+                Select(m => new
+                {
+                    m.Client.First_Name,
+                    m.Client.Last_Name,
+                    m.Client.Phone,
+                    m.Pitch.Pitch_Name,
+                    m.Pitch.Pitch_Number,
+                    m.Room.Rooms_Number,
+                    m.Reservation_Date,
 
+                }).ToList();
+        }
         private void Btnrsrv_Click(object sender, EventArgs e)
         {
             string firstname = txtfirstname.Text;
@@ -31,59 +45,47 @@ namespace Futbol
             DateTime datefrom = dateFrom.Value;
             DateTime dateto = dateTo.Value;
             Decimal ReservPrice = NumPrice.Value;
+            int phoneNum;
             if (Extensions.isNotEmpty(new string[]
             {
                firstname,lastname,phonenumber,pitchname,pitchnumber,roomnumber,
             }, string.Empty))
             {
-                int clientId = 0;
-                Client selectedClnt = null;
-                int RoomId = db.Rooms.FirstOrDefault(rm => rm.Rooms_Number == pitchname).Id;
-                int Pt = db.Pitches.FirstOrDefault(pitc => pitc.Pitch_Name == pitchname).Id;
-                Task clientTask = Task.Factory.StartNew(() =>
-                  {
-                      selectedClnt = db.Clients.Add(new Client
-                      {
-                          First_Name = firstname,
-                          Last_Name = lastname,
-                          Phone=Convert.ToInt32(phonenumber),
-
-                      });
-                      db.SaveChanges();
-                  });
-                clientTask.Wait();
-                if (clientTask.IsCompleted)
+                if (int.TryParse(phonenumber, out phoneNum))
                 {
-                    clientId = selectedClnt.Id;
-                }
-               
-                }
 
-                //Client Clt = db.Clients.Add(new Client
-                //{
-                //    First_Name = firstname,
-                //    Last_Name = lastname,
-                //    Phone = Convert.ToInt32(phonenumber)
-                //});
-                //db.SaveChanges();
-            
+                    int clientId = 0;
+                    Client selectedClnt = null;
+                    int RoomId = db.Rooms.FirstOrDefault(rm => rm.Rooms_Number == pitchname).Id;
+                    int PtId = db.Pitches.FirstOrDefault(pitc => pitc.Pitch_Name == pitchname).Id;
+                    Task clientTask = Task.Factory.StartNew(() =>
+                      {
+                          selectedClnt = db.Clients.Add(new Client
+                          {
 
-
-
-            void FillDataGridView()
-            {
-                dtgview.DataSource = db.Reservations.
-                    Select(m => new
+                              First_Name = firstname,
+                              Last_Name = lastname,
+                              Phone = phoneNum,
+                          });
+                          db.SaveChanges();
+                      });
+                    clientTask.Wait();
+                    if (clientTask.IsCompleted)
                     {
-                        m.Client.First_Name,
-                        m.Client.Last_Name,
-                        m.Client.Phone,
-                        m.Pitch.Pitch_Name,
-                        m.Pitch.Pitch_Number,
-                        m.Room.Rooms_Number,
-                        m.Reservation_Date,
+                        clientId = selectedClnt.Id;
+                    }
 
-                    }).ToList();
+                }
+                else
+                {
+                    lblError.Text = "Telofon nomresi herf ola bilmez";
+                    lblError.Visible = true;
+                }
+            }
+            else
+            {
+                lblError.Text = "Zehmet olmasa butun xanalari doldurun!!!!!";
+                lblError.Visible = true;
             }
 
         }

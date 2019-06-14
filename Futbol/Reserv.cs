@@ -37,7 +37,7 @@ namespace Futbol
 
         private void Btnclients_Click(object sender, EventArgs e)
         {
-            Clients clnt = new Clients();
+            ClientDashboard clnt = new ClientDashboard();
             clnt.ShowDialog();
 
         }

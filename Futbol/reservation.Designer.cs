@@ -282,18 +282,19 @@
             this.dtgview.Name = "dtgview";
             this.dtgview.Size = new System.Drawing.Size(901, 124);
             this.dtgview.TabIndex = 27;
-          
             // 
             // lblError
             // 
+            this.lblError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.Font = new System.Drawing.Font("Mongolian Baiti", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(890, 320);
+            this.lblError.Location = new System.Drawing.Point(748, 360);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(76, 29);
+            this.lblError.Size = new System.Drawing.Size(54, 20);
             this.lblError.TabIndex = 28;
             this.lblError.Text = "Error";
+            this.lblError.Visible = false;
             // 
             // reservation
             // 
@@ -327,7 +328,6 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "reservation";
             this.Text = "reservation";
-       
             ((System.ComponentModel.ISupportInitialize)(this.NumPrice)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

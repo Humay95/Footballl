@@ -47,7 +47,7 @@
             // 
             // txtpcname
             // 
-            this.txtpcname.Location = new System.Drawing.Point(449, 159);
+            this.txtpcname.Location = new System.Drawing.Point(348, 173);
             this.txtpcname.Multiline = true;
             this.txtpcname.Name = "txtpcname";
             this.txtpcname.Size = new System.Drawing.Size(219, 35);
@@ -63,11 +63,10 @@
             this.label1.Size = new System.Drawing.Size(326, 125);
             this.label1.TabIndex = 1;
             this.label1.Text = "Pitchs";
-        
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Name = "panel1";
@@ -79,7 +78,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(244, 163);
+            this.label2.Location = new System.Drawing.Point(143, 177);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 31);
             this.label2.TabIndex = 3;
@@ -90,7 +89,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(244, 218);
+            this.label3.Location = new System.Drawing.Point(245, 241);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(199, 31);
             this.label3.TabIndex = 5;
@@ -98,10 +97,10 @@
             // 
             // btnPitch
             // 
-            this.btnPitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnPitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnPitch.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPitch.ForeColor = System.Drawing.Color.White;
-            this.btnPitch.Location = new System.Drawing.Point(511, 334);
+            this.btnPitch.Location = new System.Drawing.Point(617, 438);
             this.btnPitch.Name = "btnPitch";
             this.btnPitch.Size = new System.Drawing.Size(354, 60);
             this.btnPitch.TabIndex = 6;
@@ -114,7 +113,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(244, 269);
+            this.label4.Location = new System.Drawing.Point(312, 310);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 31);
             this.label4.TabIndex = 8;
@@ -123,7 +122,7 @@
             // numptc
             // 
             this.numptc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numptc.Location = new System.Drawing.Point(449, 269);
+            this.numptc.Location = new System.Drawing.Point(505, 310);
             this.numptc.Name = "numptc";
             this.numptc.Size = new System.Drawing.Size(219, 31);
             this.numptc.TabIndex = 9;
@@ -139,9 +138,10 @@
             // 
             // nmpicnum
             // 
-            this.nmpicnum.Location = new System.Drawing.Point(459, 228);
+            this.nmpicnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmpicnum.Location = new System.Drawing.Point(462, 241);
             this.nmpicnum.Name = "nmpicnum";
-            this.nmpicnum.Size = new System.Drawing.Size(120, 20);
+            this.nmpicnum.Size = new System.Drawing.Size(200, 31);
             this.nmpicnum.TabIndex = 11;
             // 
             // lblError
